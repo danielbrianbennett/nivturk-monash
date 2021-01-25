@@ -7,7 +7,7 @@
 NivTurk
 =======
 
-Niv lab tools for securely serving and storing data from online computational psychiatry experiments.
+Tools for securely serving and storing data from online computational psychiatry experiments. Fork of the original repo, modified to work on Monash University servers
 
 Quickstart
 ^^^^^^^^^^
@@ -16,8 +16,8 @@ The following is the minimal set of commands needed to get started with NivTurk 
 
 .. code-block:: bash
 
-    ssh <user-name>@<server-name>.princeton.edu
-    git clone https://github.com/nivlab/nivturk.git
+    ssh <user-name>@<server-name>.monash.edu
+    git clone https://github.com/danielbrianbennett/nivturk-monash.git
     cd nivturk
     pip install -r requirements.txt
     gunicorn -b 0.0.0.0:9000 -w 4 app:app
