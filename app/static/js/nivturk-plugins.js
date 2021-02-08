@@ -2,7 +2,7 @@
 function pass_message(msg) {
 
   $.ajax({
-    url: "experiment",
+    url: "/experiment",
     method: 'POST',
     data: JSON.stringify(msg),
     contentType: "application/json; charset=utf-8",
@@ -21,7 +21,7 @@ function redirect_success(workerId, assignmentId, hitId, code_success) {
   var url = "https://app.prolific.co/submissions/complete?cc=" + code_success;
 
   $.ajax({
-    url: "redirect_success",
+    url: "/redirect_success",
     method: 'POST',
     data: JSON.stringify(jsPsych.data.get().json()),
     contentType: "application/json; charset=utf-8",
@@ -40,7 +40,7 @@ function redirect_reject(workerId, assignmentId, hitId, code_reject) {
   var url = "https://app.prolific.co/submissions/complete?cc=" + code_reject;
 
   $.ajax({
-    url: "redirect_reject",
+    url: "/redirect_reject",
     method: 'POST',
     data: JSON.stringify(jsPsych.data.get().json()),
     contentType: "application/json; charset=utf-8",
@@ -58,7 +58,7 @@ function redirect_error(error) {
   var url = "/error/" + error;
 
   $.ajax({
-    url: "redirect_error",
+    url: "/redirect_error",
     method: 'POST',
     data: JSON.stringify(jsPsych.data.get().json()),
     contentType: "application/json; charset=utf-8",
