@@ -2,7 +2,6 @@
 function pass_message(msg) {
 
   $.ajax({
-    url: "/" + AJAX_APP_NAME + "/experiment",
     url: "experiment",
     method: 'POST',
     data: JSON.stringify(msg),
