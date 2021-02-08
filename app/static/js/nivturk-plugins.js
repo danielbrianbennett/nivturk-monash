@@ -1,8 +1,10 @@
 // Pass message from jsPsych to NivTurk
 function pass_message(msg) {
 
+  var app_name = 'yet_another_test'
+
   $.ajax({
-    url: "/experiment",
+    url: "/" + app_name "/experiment",
     method: 'POST',
     data: JSON.stringify(msg),
     contentType: "application/json; charset=utf-8",
