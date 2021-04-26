@@ -46,7 +46,7 @@ Check running process with ``` httpd -t -D DUMP_INCLUDES```
 
 ### My process
 
-Assumes that the ssl.conf file has been updated with redirects, e.g.,
+Assumes that the ssl.conf file (```/etc/httpd/conf.d/ssl.conf```) has been updated with redirects, e.g.,
 
 ```
 
@@ -87,8 +87,14 @@ To set this up:
 
 ``` bash
 
+# sudo
+sudo sudosh
+
 # create detached window
 tmux
+
+# add conda to path
+export PATH=/srv/anaconda/anaconda3/bin:/srv/anaconda/anaconda3/bin:/srv/home/dben0009/.local/bin:/srv/home/dben0009/bin:$PATH
 
 # launch virtual environment
 source activate nivturk
